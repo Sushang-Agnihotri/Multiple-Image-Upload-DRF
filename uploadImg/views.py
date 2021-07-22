@@ -25,19 +25,12 @@ class PhotoUploadView(ListCreateAPIView):
             else:
                 success = False
         if success:
-#            return Response(response, status=status.HTTP_201_CREATED)
-
-
             return Response({
                 'status' : 1, 
                 'message' : 'Success',
                 'Data' : response,
-
             })
-#            return Response(response,status=status.HTTP_400_BAD_REQUEST)
-
         return Response({
                 'status' : 0, 
                 'message' : 'Error!',
-
             })    
